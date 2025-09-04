@@ -66,3 +66,24 @@ colors[3] = 1;
 console.log(colors);
 console.log(colors.length);
 console.log(colors.join(","));
+
+// functions
+function greetMe() {
+  console.log("Hello mee!!");
+}
+
+greetMe();
+
+function greetName(name) {
+  console.log("Hello " + name);
+}
+
+greetName("John");
+
+function greetFullName(firstName, lastName) {
+  console.log("Hello " + firstName + " " + lastName);
+}
+
+greetFullName("john");
+
+greetFullName("john", "smith");
