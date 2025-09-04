@@ -15,3 +15,8 @@ console.log(name);
 
 let firstName = "Abdullah";
 let lastName = "Nadeem";
+
+// Declering constants
+
+const interestRate = 0.3;
+console.log(interestRate);
