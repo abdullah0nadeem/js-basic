@@ -55,3 +55,14 @@ console.log(person.age);
 // Bracket Notation
 person["name"] = "Abdullah";
 console.log(person["name"]);
+
+// arrays
+let colors = ["red", "blue", "white"];
+console.log(colors);
+console.log(colors[0]);
+colors[2] = "green";
+console.log(colors);
+colors[3] = 1;
+console.log(colors);
+console.log(colors.length);
+console.log(colors.join(","));
