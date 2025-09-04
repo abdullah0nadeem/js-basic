@@ -20,3 +20,17 @@ let lastName = "Nadeem";
 
 const interestRate = 0.3;
 console.log(interestRate);
+
+// Variable types
+// Premitive / value types
+//  - string
+//  - number
+//  - boolean
+//  - undefine
+//  - null
+
+let myName = "Abdullah"; // string literal
+let age = 20; // number literal
+let isTaken = false; // boolea literal (true/false)
+let carName = undefined;
+let carType = null;
