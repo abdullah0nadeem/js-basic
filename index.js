@@ -34,3 +34,24 @@ let age = 20; // number literal
 let isTaken = false; // boolea literal (true/false)
 let carName = undefined;
 let carType = null;
+
+// Referenc types
+//  - objects
+//  - array
+//  - function
+
+let person = {
+  name: "Abdullah",
+  age: 21,
+};
+
+console.log(person);
+// Dot Notation
+person.name = "Nadeem";
+
+console.log(person.name);
+console.log(person.age);
+
+// Bracket Notation
+person["name"] = "Abdullah";
+console.log(person["name"]);
