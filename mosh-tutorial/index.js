@@ -87,3 +87,15 @@ function greetFullName(firstName, lastName) {
 greetFullName("john");
 
 greetFullName("john", "smith");
+
+function greetTemplateLiteral(firstName, lastName) {
+  console.log(`Hello ${firstName} ${lastName}`);
+}
+
+// Calcuation a value
+function square(number) {
+  return number * number;
+}
+
+let number = square(2);
+console.log(number);
