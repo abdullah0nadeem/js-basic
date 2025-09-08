@@ -156,3 +156,44 @@ const completedTodos = todos
     return todo.text;
   });
 console.log(completedTodos);
+
+// Conditionals
+const value = 20;
+
+if (value == 10) {
+  // only check value
+  console.log("value is equal to 10");
+} else {
+  console.log("value is not equal to 10");
+}
+
+if (value === 10) {
+  // strict - checks value and type
+  console.log("value is equal to 10");
+} else {
+  console.log("value is not equal to 10");
+}
+
+if (value === 10) {
+  console.log("value is equal to 10");
+} else if (value > 10) {
+  console.log("value is greater than 10");
+} else {
+  console.log("value is less than 10");
+}
+
+const isValueInRange = value > 0 && value < 20; // ||
+
+// nested if
+
+if (value > 5) {
+  if (isValueInRange) {
+    console.log("Values is in b/w 5 and 20");
+  }
+}
+
+// ternary operator
+const color = value > 10 ? "red" : "blue";
+console.log(color);
+
+// switch
