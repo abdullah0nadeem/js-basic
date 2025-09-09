@@ -54,3 +54,36 @@
 //   document.querySelector("body").classList.add("bg-dark");
 //   ul.lastElementChild.innerHTML = "<h1>Hello</h1>";
 // });
+
+const form = document.querySelector("#my-form");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const message = document.querySelector(".msg");
+const userList = document.querySelector("#users");
+
+form.addEventListener("submit", onSubmit);
+
+function onSubmit(e) {
+  e.preventDefault();
+
+  if (nameInput.value === "" || emailInput.value === "") {
+    message.classList.add("error");
+    message.innerHTML = "Please enter all fields";
+    setTimeout(() => {
+      message.classList.remove("error");
+      message.innerHTML = "";
+    }, 3000);
+
+    return;
+  }
+
+  const li = document.createElement("li");
+  li.appendChild(
+    document.createTextNode(`${nameInput.value} : ${emailInput.value}`)
+  );
+  userList.appendChild(li);
+
+  // clear fields
+  nameInput.value = "";
+  emailInput.value = "";
+}
