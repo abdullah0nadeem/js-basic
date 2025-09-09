@@ -354,3 +354,5 @@ class Person3 {
 
 const person1 = new Person3("Abd", "Nad", "3-9-1987");
 console.log(person1);
+
+// DOM
