@@ -287,3 +287,50 @@ const series3 = {
 };
 
 console.log(series3.printDetails());
+
+// OOP
+// Pervisouly used object literal for defining objects
+
+// Constructor function/function prototype - for defining objects - OOP in ES5
+
+// parametrs are properties of object
+function Person(firstName, lastName, dob) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dob = dob;
+}
+
+Person.prototype.getFullName = function () {
+  return `${this.firstName} ${this.lastName}`;
+};
+
+Person.prototype.getBrithYear = function () {
+  return new Date(this.dob).getFullYear();
+};
+
+// Instantiation of object
+const p = new Person("John", "Well", "20-1-1986");
+const p2 = new Person("Mary", "Smith", "4-9-1979");
+console.log(p);
+console.log(p2.firstName);
+
+function Person2(firstName, lastName, dob) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.dob = new Date(dob);
+
+  this.getBrithYear = function () {
+    return this.dob.getFullYear();
+  };
+
+  this.getFullName = function () {
+    return `${this.firstName} ${this.lastName}`;
+  };
+}
+
+const p3 = new Person2("Mary", "Smith", "4-9-1979");
+console.log(p3.dob);
+console.log(p3.dob.getFullYear());
+console.log(p3.dob.getDay());
+console.log(p3.getBrithYear());
+console.log(p3.getFullName());
