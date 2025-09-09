@@ -291,7 +291,7 @@ console.log(series3.printDetails());
 // OOP
 // Pervisouly used object literal for defining objects
 
-// Constructor function/function prototype - for defining objects - OOP in ES5
+// Constructor function/function prototype/prototypal inheritance - for defining objects - OOP in ES5
 
 // parametrs are properties of object
 function Person(firstName, lastName, dob) {
@@ -334,3 +334,23 @@ console.log(p3.dob.getFullYear());
 console.log(p3.dob.getDay());
 console.log(p3.getBrithYear());
 console.log(p3.getFullName());
+
+// OOP - ES6 using classes
+class Person3 {
+  constructor(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+  }
+
+  getBrithYear() {
+    return this.dob.getFullYear();
+  }
+
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const person1 = new Person3("Abd", "Nad", "3-9-1987");
+console.log(person1);
