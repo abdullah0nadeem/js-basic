@@ -208,3 +208,82 @@ switch (color) {
     console.log("Color is not red or blue");
     break;
 }
+
+// functions
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
+
+function addNumbers(num1 = 1, num2 = 1) {
+  return num1 + num2;
+}
+
+console.log(addNumbers(5, 5));
+
+// arrow functions - ES-6/ES-2015
+const add = (num1, num2) => {
+  return num1 + num2;
+};
+
+const square = (number) => number * number;
+
+console.log(add(1, 6));
+console.log(square(2));
+
+// lexical this
+
+// golobal scoping
+const printCharacter = () => {
+  return this.character + " is a main character in this show";
+};
+
+const series = {
+  title: "House of Cards",
+  character: "Frank Underwood",
+  printTitle() {
+    return `The name of the series is ${this.title}`;
+  },
+  printCharacter: printCharacter,
+
+  printDetails() {
+    console.log(this);
+    return `${this.printTitle()} and ${this.printCharacter()}`;
+  },
+};
+
+console.log(series.printDetails());
+
+const series2 = {
+  title: "House of Cards",
+  character: "Frank Underwood",
+  printTitle() {
+    return `The name of the series is ${this.title}`;
+  },
+  printCharacter: () => {
+    return this.character + " is a main character in this show";
+  },
+  printDetails() {
+    return `${this.printTitle()} and ${this.printCharacter()}`;
+  },
+};
+
+console.log(series2.printDetails());
+
+// lexical scoping
+const series3 = {
+  title: "House of Cards",
+  character: "Frank Underwood",
+  printTitle() {
+    return `The name of the series is ${this.title}`;
+  },
+
+  printDetails() {
+    const printCharacter = () => {
+      return this.character + " is a main character in this show";
+    };
+
+    return `${this.printTitle()} and ${printCharacter()}`;
+  },
+};
+
+console.log(series3.printDetails());
