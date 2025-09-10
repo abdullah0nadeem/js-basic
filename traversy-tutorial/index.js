@@ -16,7 +16,7 @@
 // const items = document.querySelectorAll(".item");
 // items.forEach((item) => console.log(item));
 
-// DOM - Manupulation
+// DOM - Manipulation
 // const ul = document.querySelector(".items");
 // ul.remove();
 // ul.lastElementChild.remove();
