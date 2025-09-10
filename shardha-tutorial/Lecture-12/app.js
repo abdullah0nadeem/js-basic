@@ -78,39 +78,93 @@ if (age >= 18) {
 // Promises
 // Promise States - pending, fulfilled, rejected
 
-let promise = new Promise((resolve, reject) => {
-  console.log("Promise");
-  // resolve("Success");
-  // reject("error");
-});
+// let promise = new Promise((resolve, reject) => {
+//   console.log("Promise");
+//   // resolve("Success");
+//   // reject("error");
+// });
 
-function getDataBy(id, getNextData) {
+// function getDataBy(id, getNextData) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log(`Data = ${id}`);
+//       resolve("success");
+
+//       if (getNextData) {
+//         getNextData();
+//       }
+//     }, 5000);
+//   });
+// }
+
+// let result = getDataBy(1);
+
+// const getPromise = () => {
+//   return new Promise((resolve, reject) => {
+//     console.log("Promise");
+//     resolve("success");
+//   });
+// };
+
+// let newPromise = getPromise();
+// newPromise.then((res) => {
+//   console.log("promise fulfilled", res);
+// });
+
+// newPromise.catch((err) => {
+//   console.log("promise rejected", err);
+// });
+
+// Promise chaining
+function aysncFunc(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(`some data ${id}`);
+      resolve("success");
+    }, 4000);
+  });
+}
+
+// console.log("fetching data 1...");
+// let p1 = aysncFunc(1);
+// p1.then((res) => {
+//   console.log(res);
+// });
+
+// console.log("fetching data 2...");
+// let p2 = aysncFunc(2);
+// p2.then((res) => {
+//   console.log(res);
+// });
+
+// console.log("fetching data 1...");
+// aysncFunc(1).then((res) => {
+//   console.log(res);
+
+//   console.log("fetching data 2...");
+//   aysncFunc(2).then((res) => {
+//     console.log(res);
+//   });
+// });
+
+function getDataBy(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log(`Data = ${id}`);
       resolve("success");
-
-      if (getNextData) {
-        getNextData();
-      }
-    }, 5000);
+    }, 2000);
   });
 }
 
-let result = getDataBy(1);
+// Promise chaining
 
-const getPromise = () => {
-  return new Promise((resolve, reject) => {
-    console.log("Promise");
-    resolve("success");
+getDataBy(1)
+  .then((result) => {
+    return getDataBy(2);
+  })
+  .then((result) => {
+    return getDataBy(3);
+  })
+  .then((result) => {
+    console.log(result);
   });
-};
-
-let newPromise = getPromise();
-newPromise.then((res) => {
-  console.log("promise fulfilled", res);
-});
-
-newPromise.catch((err) => {
-  console.log("promise rejected", err);
-});
