@@ -158,13 +158,55 @@ function getDataBy(id) {
 
 // Promise chaining
 
-getDataBy(1)
-  .then((result) => {
-    return getDataBy(2);
-  })
-  .then((result) => {
-    return getDataBy(3);
-  })
-  .then((result) => {
-    console.log(result);
+// getDataBy(1)
+//   .then((result) => {
+//     return getDataBy(2);
+//   })
+//   .then((result) => {
+//     return getDataBy(3);
+//   })
+//   .then((result) => {
+//     console.log(result);
+//   });
+
+// Aysnc-Await
+// aysnc function always return a Promise
+
+function api(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log(`weather data ${id}`);
+      resolve(200);
+    }, 2000);
   });
+}
+
+async function getWeatherData() {
+  await api(1);
+  await api(2);
+}
+
+// getWeatherData();
+
+async function getAllData() {
+  await getDataBy(1);
+  await getDataBy(2);
+  await getDataBy(3);
+}
+
+// getAllData();
+
+// IIFE: Immediately Invoked Function Expression
+(function () {
+  console.log("hello");
+})();
+
+(() => {
+  console.log("hello");
+})();
+
+(async function () {
+  await getDataBy(1);
+  await getDataBy(2);
+  await getDataBy(3);
+})();
