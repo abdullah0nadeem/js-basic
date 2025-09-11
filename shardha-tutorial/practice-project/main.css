@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f2f6fa;
+}
+
+.container {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 50vh;
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.amount {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.amount input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.dropdown-continer {
+  display: flex;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.from,
+.to {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.select-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #ddd;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.select-container img {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+}
+
+select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.dropdown i {
+  font-size: 20px;
+  color: #555;
+}
+
+.exchange-rate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.converted-rate {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.exchange-rate button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.exchange-rate button:hover {
+  background: #0056b3;
+}

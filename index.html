@@ -4,18 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Convertor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./shardha-tutorial/practice-project/main.css">
   </head>
   <body>
     <div class="container">
       <h2>Currnecy Converter</h2>
+
       <form action="">
         <div class="amount">
           <span>Enter Amount</span>
           <input type="number" name="amount" id="amount" value="100" />
         </div>
-        <div class="dropdown"></div>
+
+        <div class="drompdown-continer">
+            <div class="dropdown">
+                <div class="from">
+                    <span>From</span>
+                    <div class="select-container">
+                    <img
+                        src="https://flagsapi.com/US/flat/64.png"
+                    />
+                    <select name="from" id="from"></select>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-right-left"></i>
+
+                <div class="to">
+                    <span>To</span>
+                    <div class="select-container">
+                    <img
+                        src="https://flagsapi.com/PK/flat/64.png"
+                    />
+                    <select name="to" id="to"></select>
+                </div>
+            </div>
+        </div>
+
+        <div class="exchange-rate">
+            <div class="converted-rate">1 USD = 278 PKR</div>
+            <button>Get exchange rate</button>
+        </div>
       </form>
     </div>
+    <script src="./shardha-tutorial/practice-project/codes.js"></script>
     <script src="./shardha-tutorial/practice-project/app.js"></script>
   </body>
 </html>
